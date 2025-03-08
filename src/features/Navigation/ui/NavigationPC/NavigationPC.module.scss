@@ -1,0 +1,7 @@
+@use '@globals/styles/breakpoints';
+
+.nav {
+	@media (width < breakpoints.$lg) {
+		display: none;
+	}
+}

@@ -1,0 +1,42 @@
+@use '@globals/styles/breakpoints';
+
+.list {
+	display: flex;
+	align-items: center;
+
+	&--pc {
+		gap: 32px;
+	}
+	&--mobile {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	&__item {
+		@media (width < breakpoints.$lg) {
+			display: flex;
+			justify-content: center;
+			border-top: 1px solid var(--color-transparent-gray);
+
+			&:last-child {
+				border-bottom: 1px solid var(--color-transparent-gray);
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		color: var(--color-gray-200);
+
+		@media (width < breakpoints.$lg) {
+			padding-top: 32px;
+			padding-bottom: 32px;
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				color: var(--color-blue-primary);
+			}
+		}
+	}
+}

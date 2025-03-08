@@ -1,0 +1,51 @@
+@use '@globals/styles/breakpoints';
+
+.footer {
+	position: relative;
+	z-index: 1;
+	flex-shrink: 0;
+	margin-top: auto;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	background-color: var(--color-white);
+	border-radius: var(--primary-border-radius) var(--primary-border-radius) 0 0;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 380px;
+		height: 270px;
+		background-image: url('/footer_bg.svg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		@media (width < breakpoints.$xl) {
+			width: 320px;
+			height: 220px;
+		}
+		@media (width < breakpoints.$md) {
+			width: 225px;
+			height: 160px;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin-top: 32px;
+		padding-top: 16px;
+		border-top: 1px solid var(--color-transparent-gray);
+	}
+
+	.text {
+		font-size: var(--font-size-s);
+		line-height: var(--font-line-s);
+		color: var(--color-gray-200);
+	}
+}

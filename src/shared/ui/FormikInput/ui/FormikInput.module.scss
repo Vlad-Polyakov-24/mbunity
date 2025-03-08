@@ -1,0 +1,48 @@
+@use '@globals/styles/breakpoints';
+
+.input {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+
+	&--error {
+		.input__field {
+			outline: 1px solid var(--color-red);
+		}
+	}
+
+	&__caption {
+		font-size: var(--font-size-ml);
+		line-height: var(--font-line-ml);
+	}
+
+	&__wrapper {
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+
+	&__field {
+		display: block;
+		width: 100%;
+		padding: 20px 32px;
+		background-color: var(--color-gray-100);
+		border-radius: 8px;
+		border: none;
+		font-size: var(--font-size-ml);
+		line-height: var(--font-line-ml);
+
+		@media (width < breakpoints.$md) {
+			padding: 15px 25px;
+		}
+
+		&::placeholder {
+			color: var(--color-lignt-200);
+		}
+
+		&:focus {
+			outline-color: var(--color-blue-primary);
+		}
+	}
+}
