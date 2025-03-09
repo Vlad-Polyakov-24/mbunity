@@ -1,21 +1,16 @@
 import { classNames } from '@shared/lib/classNames';
 import { Container } from '@shared/ui/Container';
-import styles from './SectionIntro.module.scss';
 
 type SectionIntroProps = {
 	className?: string;
 };
 
-const SectionIntro = (props: SectionIntroProps) => {
-	const { className } = props;
-
-	return (
-		<section className={classNames(styles.intro, {}, [className])}>
-			<Container>
-				<h1>Intro</h1>
-			</Container>
-		</section>
-	);
-};
+const SectionIntro = ({ className }: SectionIntroProps) => (
+	<section className={classNames('', {}, [className])}>
+		<Container>
+			<h1>Home page</h1>
+		</Container>
+	</section>
+);
 
 export { SectionIntro };

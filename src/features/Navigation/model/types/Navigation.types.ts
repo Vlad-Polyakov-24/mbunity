@@ -1,4 +1,5 @@
-export enum NavigationListTheme {
-	PC = 'list--pc',
-	MOBILE = 'list--mobile',
+export enum FooterNavigationTheme {
+	COMPANY = 'company',
+	LEGAL = 'legal',
+  QUICK_LINKS = 'quick_inks',
 }

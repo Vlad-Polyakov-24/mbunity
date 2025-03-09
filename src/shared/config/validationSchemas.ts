@@ -1,4 +1,5 @@
 import * as yup from 'yup';
+import NewsletterForm from '@features/Newsletter/ui/NewsletterForm/NewsletterForm';
 
 export const contactsSchema = yup.object().shape({
 	first_name: yup
@@ -30,4 +31,12 @@ export const contactsSchema = yup.object().shape({
 	conditions: yup
 		.boolean()
 		.oneOf([true], 'Debes aceptar los términos y condiciones'),
+});
+
+export const newsletterSchema = yup.object().shape({
+	email: yup
+		.string()
+		.trim()
+		.email('Invalid email address')
+		.required('Email is required'),
 });

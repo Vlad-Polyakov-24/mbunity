@@ -1,0 +1,30 @@
+@use '@globals/styles/breakpoints';
+
+.list {
+	display: grid;
+	grid-template-columns: minmax(330px, 1fr) 1fr 1fr 1fr 300px;
+	gap: 40px;
+
+	@media (width < breakpoints.$xl) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		&:last-child {
+			@media (width < breakpoints.$md) {
+				grid-column: span 2;
+			}
+		}
+	}
+
+	&__caption {
+		font-size: var(--font-size-ml);
+		line-height: var(--font-line-ml);
+		font-weight: 600;
+		color: var(--color-white);
+	}
+}

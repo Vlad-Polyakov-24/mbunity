@@ -2,7 +2,7 @@
 
 .hamburger {
 	position: relative;
-	z-index: 110;
+	z-index: 101;
 	display: none;
 	width: 18px;
 	height: 12px;
@@ -18,9 +18,9 @@
 		position: absolute;
 		height: 2px;
 		width: 100%;
-		background-color: var(--color-blue-primary);
-		border-radius: 3px;
-		left: 0;
+		background-color: var(--color-black);
+		border-radius: 2px 0 0 2px;
+		right: 0;
 		transition: inherit;
 		transform-origin: left center;
 
@@ -31,12 +31,15 @@
 			top: 5px;
 		}
 		&:nth-child(3) {
+			width: 50%;
 			top: 10px;
 		}
 	}
 
 	&.open {
 		span {
+			background-color: var(--color-white);
+
 			&:nth-child(1) {
 				transform: rotate(45deg);
 			}
@@ -45,6 +48,7 @@
 				opacity: 0;
 			}
 			&:nth-child(3) {
+				width: 100%;
 				transform: rotate(-45deg);
 				top: 13px;
 			}

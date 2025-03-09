@@ -1,0 +1,20 @@
+.tooltip {
+	top: 100%;
+	right: 0;
+	width: max-content;
+	max-width: 200px;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+	}
+
+	&__btn {
+		@media (hover: hover) {
+			&:hover {
+				text-shadow: 0 0 1px currentColor;
+			}
+		}
+	}
+}

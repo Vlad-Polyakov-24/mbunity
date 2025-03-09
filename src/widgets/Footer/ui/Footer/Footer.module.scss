@@ -1,0 +1,31 @@
+@use '@globals/styles/breakpoints';
+
+.footer {
+	padding-top: 80px;
+	padding-bottom: 65px;
+	background-color: var(--color-black);
+
+	@media (width < breakpoints.$xl) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	@media (width < breakpoints.$md) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	&__inner {
+		&:first-child {
+			padding-bottom: 45px;
+
+			@media (width < breakpoints.$lg) {
+				padding-bottom: 20px;
+			}
+		}
+
+		+ .footer__inner {
+			padding-top: 30px;
+			border-top: 1px solid var(--color-white);
+		}
+	}
+}

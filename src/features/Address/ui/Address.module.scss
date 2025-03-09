@@ -1,0 +1,26 @@
+.address {
+	display: flex;
+	flex-direction: column;
+
+	&--page {
+		gap: 50px;
+	}
+	&--footer {
+		gap: 24px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: flex-start;
+		gap: 25px;
+		color: var(--color-white);
+
+		a {
+			@media (hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

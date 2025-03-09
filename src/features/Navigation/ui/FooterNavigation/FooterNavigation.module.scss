@@ -1,0 +1,14 @@
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	color: var(--color-white);
+
+	&__link {
+		@media (hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
